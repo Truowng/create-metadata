@@ -10,12 +10,12 @@ if (!fs.existsSync(outputDir)) {
 }
 
 let i = 0;
-let e = 9999;
+let e = 10;
 const arrNum = [];
 const arrProducts = [];
 let count = 0;
 
-let commonQty = Math.floor(e * 0.4);
+const commonQty = Math.floor(e * 0.4);
 const rareQty = Math.floor(e * 0.25);
 const epicQty = Math.floor(e * 0.2);
 const legendQty = Math.floor(e * 0.15);
@@ -147,28 +147,12 @@ const fillInfo = (id, rank) => {
   return {
     name: `${rank.name} #${id}`,
     description:
-      "Dive into a one-of-a-kind Mutant Ape NFT collection on the TON blockchain. Each artwork is a digital masterpiece waiting to be explored and collected. Experience the future of digital art today!",
+      "Each NFT in the collection is designed with unique images, colors, and details, accurately reflecting the identity and history of each team. This not only creates diversity but also allows the owner to possess a small yet distinctive part of European football.",
     image: rank.images,
     attributes: [
       {
-        trait_type: "Rarity",
-        value: rank.rarity,
-      },
-      {
-        trait_type: "Hat",
-        value: rank.hat,
-      },
-      {
-        trait_type: "Earrings",
-        value: rank.earrings,
-      },
-      {
-        trait_type: "Clothes",
-        value: rank.clothes,
-      },
-      {
-        trait_type: "Background",
-        value: rank.background,
+        trait_type: "Country",
+        value: "",
       },
     ],
   };
